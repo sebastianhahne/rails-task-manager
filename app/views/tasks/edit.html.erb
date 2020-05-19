@@ -1,9 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title></title>
+</head>
+<body>
+<div class= "form-group">
 <%= form_for(@task) do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :details %>
   <%= f.text_field :details %>
+  <%= f.label "Mark as Completed" %>
+  <%= f.check_box :completed %>
   <%= f.submit %>
 <% end %>
 
+</div>
 <%= link_to "Back to all tasks", tasks_path %>
+</body>
+</html>
